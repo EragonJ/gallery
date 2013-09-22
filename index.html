@@ -14,9 +14,23 @@
 
         <!-- 3rd party js -->
         <script src="public/vendor/jquery/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+        <script src="public/vendor/angular/angular.min.js"></script>
+
+        <!-- main js -->
+        <script src="public/js/config.js"></script>
+        <!--<script src="public/js/index.js"></script>-->
+
+        <!-- our controllers -->
+        <script src="public/js/controllers/flickrItemsListController.js"></script>
+        <!-- <script src="public/js/controllers/itemListController.js"></script> -->
     </head>
-    <body>
+    <body ng-controller="flickrItemsListController">
+
+        <input type="text" ng-model="userQuery">
+
+        <ul class="items">
+            <li ng-repeat="item in items | filter:userQuery"></li>
+        </ul>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--
