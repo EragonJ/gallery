@@ -29,7 +29,10 @@
         <input type="text" ng-model="userQuery">
 
         <ul class="items">
-            <li ng-repeat="item in items | filter:userQuery"></li>
+            <li ng-repeat="item in items | filter: userQuery">
+                <h1>{{item.title}}</h1>
+                <img ng-src="{{item.thumb_src}}" alt="{{item.title}}">
+            </li>
         </ul>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
