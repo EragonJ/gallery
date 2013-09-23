@@ -2,9 +2,9 @@ function flickrItemsListController($scope, $http) {
 
     var url = "http://api.flickr.com/services/rest/";
     var params = {
-        api_key : window.Config.flickrApiKey,
+        api_key : window.Config.flickr.apiKey,
+        user_id : window.Config.flickr.userId,
         method : "flickr.photos.search",
-        user_id : "45247652@N04",
         format : "json",
         jsoncallback : "JSON_CALLBACK"
     };
