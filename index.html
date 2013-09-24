@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="gallery">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -18,22 +18,16 @@
 
         <!-- main js -->
         <script src="public/js/config.js"></script>
-        <!--<script src="public/js/index.js"></script>-->
+        <script src="public/js/app.js"></script>
 
         <!-- our controllers -->
         <script src="public/js/controllers/flickrItemsListController.js"></script>
-        <!-- <script src="public/js/controllers/itemListController.js"></script> -->
+        <script src="public/js/controllers/youtubeItemsListController.js"></script>
     </head>
-    <body ng-controller="flickrItemsListController">
+    <body>
 
         <input type="text" ng-model="userQuery">
-
-        <ul class="items">
-            <li ng-repeat="item in items | filter: userQuery">
-                <h1>{{item.title}}</h1>
-                <img ng-src="{{item.thumb_src}}" alt="{{item.title}}">
-            </li>
-        </ul>
+        <div ng-view></div>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--

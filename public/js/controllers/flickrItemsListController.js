@@ -1,4 +1,4 @@
-function flickrItemsListController($scope, $http) {
+function FlickrItemsListController($scope, $http) {
 
     var url = "http://api.flickr.com/services/rest/";
     var params = {
@@ -31,3 +31,4 @@ function flickrItemsListController($scope, $http) {
         $scope.items = aggregatedPhotos;
     });
 }
+//flickrItemsListController = ['$scope', '$http'];
